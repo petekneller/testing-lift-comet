@@ -7,7 +7,7 @@ import net.liftweb.http.RenderOut
 import net.liftweb.http.js.JsCmds._
 import net.liftweb.http.js.jquery.JqJE._
 
-case class BondCometActor() extends CustomisableBondCometActor {
+case class TestCometActor() extends CustomisableCometActor {
 
   def render: RenderOut = {
     this ! Init

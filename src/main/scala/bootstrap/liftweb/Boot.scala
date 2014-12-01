@@ -3,7 +3,7 @@ package bootstrap.liftweb
 import java.awt.event.{ActionEvent, ActionListener}
 import javax.swing.Timer
 
-import code.comet.BondCometActor
+import code.comet.TestCometActor
 import code.lib.Tick
 import net.liftweb.common.Full
 import net.liftweb.http.{CometActor, CometCreationInfo, LiftRules}
@@ -32,9 +32,9 @@ class Boot {
 
 
       LiftRules.cometCreation.append {
-        case CometCreationInfo(contType, name, html, attr, session) if contType == comet[BondCometActor] ⇒ {
-          val actor = BondCometActor()
-          actor.initCometActor(session, Full(comet[BondCometActor]), name, html, attr)
+        case CometCreationInfo(contType, name, html, attr, session) if contType == comet[TestCometActor] ⇒ {
+          val actor = TestCometActor()
+          actor.initCometActor(session, Full(comet[TestCometActor]), name, html, attr)
 
           new Timer(5000, new ActionListener {
             override def actionPerformed(p1: ActionEvent): Unit = {

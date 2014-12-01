@@ -5,7 +5,7 @@ import net.liftweb.http.{CometActor, LiftSession}
 
 import scala.xml.NodeSeq
 
-trait CustomisableBondCometActor extends CometActor {
+trait CustomisableCometActor extends CometActor {
   override def initCometActor(
                                theSession: LiftSession,
                                theType: Box[String],
